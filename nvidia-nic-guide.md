@@ -15,7 +15,7 @@ NVIDIA provides two main families of high-performance network adapters:
 |-------|-----------|-------------|------|--------|
 | ConnectX-6 | 200Gb/s | QSFP56 | Gen 4.0 x16 | Production |
 | ConnectX-7 | 400Gb/s | QSFP112 or OSFP | Gen 5.0 x16 | Production |
-| ConnectX-8 | 800Gb/s | OSFP or 2x QSFP112 | Gen 6.0 x16 | Production |
+| ConnectX-8 | 2x400Gb/s Ethernet (800Gb/s IB) | OSFP or 2x QSFP112 | Gen 6.0 x16 | Production |
 | ConnectX-9 | 1.6Tb/s | OSFP-XD (projected) | Gen 6.0 x48 | 2026 |
 
 ## ConnectX-6
@@ -107,17 +107,17 @@ NVIDIA provides two main families of high-performance network adapters:
 
 ### Key Specifications
 
-- **Speeds:** 800 Gbps
+- **Speeds:** 2x400Gb/s Ethernet or 800Gb/s InfiniBand XDR
 - **SerDes:** 200G PAM-4 (4 lanes) or 100G PAM-4 (8 lanes)
 - **PCIe:** Gen 6.0 x16
-- **Protocols:** 800GbE, XDR InfiniBand
+- **Protocols:** Ethernet (up to 400GbE per port), XDR InfiniBand (800G)
 
 ### Models
 
 | Model | Form Factor | Configuration |
 |-------|-------------|---------------|
-| C8180 | 1x OSFP-RHS | 800G or 2x400G split |
-| C8240 | 2x QSFP112 | 2x400G |
+| C8180 | 1x OSFP-RHS | 400GbE or 800G InfiniBand XDR |
+| C8240 | 2x QSFP112 | 2x400GbE (800Gb/s total) |
 
 ### Cable Compatibility
 
@@ -136,8 +136,8 @@ NVIDIA provides two main families of high-performance network adapters:
 - 800G SR8: OM4 50m, multimode
 - 800G DR4: SMF 500m, 4x200G PAM-4
 
-!!! tip "Split Mode"
-    C8180 can operate as single 800G or split into 2x400G using breakout cable.
+!!! tip "Protocol Support"
+    C8180 supports 800G InfiniBand XDR or 400GbE Ethernet (not 800GbE). C8240 provides 2x400GbE for 800Gb/s total Ethernet throughput.
 
 ---
 
